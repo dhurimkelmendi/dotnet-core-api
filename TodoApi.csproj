@@ -2,9 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <ApplicationInsightsResourceId>/subscriptions/61c601ae-3093-45be-b7fd-27d4892f543c/resourcegroups/myResourceGroup/providers/microsoft.insights/components/ToDoApi</ApplicationInsightsResourceId>
+    <ApplicationInsightsAnnotationResourceId>/subscriptions/61c601ae-3093-45be-b7fd-27d4892f543c/resourcegroups/myResourceGroup/providers/microsoft.insights/components/ToDoApi</ApplicationInsightsAnnotationResourceId>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.1.1" />
     <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.4" /> 
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="2.0.0" />
@@ -12,6 +15,10 @@
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
   </ItemGroup>
 
 </Project>
